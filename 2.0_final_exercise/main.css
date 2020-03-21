@@ -1,0 +1,124 @@
+html {
+    background-color: #FAFAFA;
+}
+
+.horizontal-line {
+    border-width: 1px;
+    border-style: dashed;
+    width: 100%;
+}
+
+.is-centered {
+    text-align: center;
+}
+
+body {
+    display: grid;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    display: grid;
+}
+
+.forms {
+    display: grid;
+    grid-template-areas:
+        'title description button'
+        'title description button';
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr auto;
+}
+
+.forms>.title1 {
+    grid-area: title;
+}
+
+
+.forms>.description1 {
+    grid-area: description;
+}
+
+.forms>.button {
+    grid-area: button;
+}
+
+.task {
+    display: grid;
+    grid-template-areas:
+        'task task complete delete'
+        'task-desc task-desc complete1 delete1';
+    border: 1px solid black;
+    background-color: #eeeeee;
+    padding: 10px;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr auto auto;
+}
+
+.task>p.task-title {
+    grid-area: task;
+}
+
+.task>p.task-desc {
+    grid-area: task-desc;
+}
+
+.task>.btnComplete {
+    grid-area: complete1;
+}
+
+.task>.btnDelete {
+    grid-area: delete1;
+}
+
+.completed {
+    border: 1px solid black;
+}
+
+button {
+    border-radius: 20px;
+    width: 150px;
+    color: black;
+    height: 3em;
+    font-family: 'Oswald', sans-serif;
+}
+
+.is-primary {
+    background-color: #64ffda;
+    border-color: #64ffda;
+}
+
+.is-info {
+    background-color: #039be5;
+    border-color: #039be5;
+}
+
+.is-danger {
+    background-color: #f44336;
+    color: white;
+    border-color: #f44336;
+}
+
+#btnDelete:hover {
+    background-color: #e53935;
+    color: white;
+    border-color: #e53935;
+}
+
+#btnComplete:hover {
+    background-color: #0288d1;
+    border-color: #0288d1;
+}
+
+.completed {
+    grid-template-areas:
+        'task'
+        'task';
+    grid-gap: 30px;
+    grid-template-columns: auto;
+}
+
+.completed>.taskComplete {
+    grid-area: task;
+}

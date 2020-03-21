@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <title>Simple Task Application</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="is-centered">Aplicación lista de tareas</h1>
+        <hr class="horizontal-line is-primary">
+        <form id="newTaskForm">
+            <div class="forms">
+                <label for="title" class="title1">Título</label>
+                <input required minlength="5" id="taskTitleInput" placeholder="Ingresa el título de la tarea aquí"
+                    type="text" class="title">
+                <label for="description" class="description1">Descripción</label>
+                <input required minlength="10" maxlength="50" id="taskDescInput"
+                    placeholder="Ingresa la descripción de la tarea aquí" type="text" class="description">
+                <button id="addTaskButton" type="button" class="button is-primary">Añadir</button>
+                <button id="populateFromAPI" type="button" class="is-primary">Llenar desde API</button>
+            </div>
+        </form>
+
+        <br>
+        <h2 class="is-centered">Tareas por hacer</h2>
+        <hr class="horizontal-line is-primary">
+        <div id="tasksContainer"></div>
+
+        <h2 class="is-centered">Tareas completas</h2>
+        <hr class="horizontal-line is-primary">
+        <div id="completedTasksContainer">
+        </div>
+
+    </div>
+
+    <script src="./main.js" type="text/javascript"></script>
+</body>
+
+</html>
